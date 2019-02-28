@@ -1,26 +1,24 @@
 <template>
   <div class="home">
     <h1>Tipp:</h1>
-    <RandomText />
+      <p>{{ tipp.title }}</p>
     <Buttons />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import RandomText from '@/components/RandomText.vue'
 import Buttons from '@/components/Buttons.vue'
 import PostsService from '@/services/PostsService'
 
 export default {
   name: 'home',
   components: {
-    RandomText,
-    Buttons,
+    Buttons
   },
   data () {
     return {
-      posts: []
+      tipp: {}
     }
   },
   mounted () {
