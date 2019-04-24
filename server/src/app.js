@@ -22,22 +22,22 @@ db.once('open', function (callback) {
   console.log('Connection Succeeded')
 })
 
-// app.post('/', (req, res) => {
-//   var title = req.body.title
-//   var newTipp = new Tipp({
-//     title: title
-//   })
-//
-//   newTipp.save(function (error) {
-//     if (error) {
-//       console.log(error)
-//     }
-//     res.send({
-//       success: true,
-//       message: 'Post saved successfully!'
-//     })
-//   })
-// })
+app.post('/add', (req, res) => {
+  var title = req.body.title
+  var new_tipp = new Tipp({
+    title: title
+  })
+
+  new_tipp.save(function (error) {
+    if (error) {
+      console.log(error)
+    }
+    res.send({
+      success: true,
+      message: 'Post saved successfully!'
+    })
+  })
+})
 
 app.get('/', (req, res) => {
   // with Promises:
