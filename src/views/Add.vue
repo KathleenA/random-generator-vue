@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import PostsService from '@/services/PostsService'
+  import TippsService from '@/services/TippsService'
   export default {
     name: 'NewTipp',
     data () {
@@ -17,7 +17,7 @@
     },
     methods: {
       async addTipp () {
-        await PostsService.addTipp({
+        await TippsService.addTipp({
           title: this.title,
         })
         this.$router.push({ name: 'home' })

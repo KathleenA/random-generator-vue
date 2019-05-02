@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import PostsService from '@/services/PostsService'
+import TippsService from '@/services/TippsService'
 export default {
   name: 'Buttons',
   methods: {
     async getTipp () {
-      const response = await PostsService.fetchTipp()
+      const response = await TippsService.fetchTipp()
       this.tipp = response.data
     }
   }

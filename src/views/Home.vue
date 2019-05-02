@@ -12,7 +12,7 @@
 <script>
 // @ is an alias to /src
 import Buttons from '@/components/Buttons.vue'
-import PostsService from '@/services/PostsService'
+import TippsService from '@/services/TippsService'
 
 export default {
   name: 'home',
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     async getTipp () {
-      const response = await PostsService.fetchTipp()
+      const response = await TippsService.fetchTipp()
       this.tipp = response.data
     }
   }
