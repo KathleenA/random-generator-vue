@@ -9,6 +9,12 @@
 <script>
   import PostsService from '@/services/PostsService'
   export default {
+    name: 'NewTipp',
+    data () {
+      return {
+        title: ''
+      }
+    },
     methods: {
       async addTipp () {
         await PostsService.addTipp({
