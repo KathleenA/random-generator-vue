@@ -21,7 +21,11 @@ export default {
   },
   data () {
     return {
-      tipp: {}
+      tipp: {
+        tipp: {
+          title: ''
+        }
+      }
     }
   },
   mounted () {
